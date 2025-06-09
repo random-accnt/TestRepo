@@ -1,10 +1,10 @@
 services:
 - type: web
-  name: test:latest
+  name: test
   runtime: go
   plan: free
   region: frankfurt
   autoDeployTrigger: commit
-  buildComand: make build
+  buildCommand: make build
   startCommand: make run
 version: "1"
