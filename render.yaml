@@ -5,4 +5,6 @@ services:
   plan: free
   region: frankfurt
   autoDeployTrigger: commit
+  buildComand: make build
+  startCommand: make run
 version: "1"
