@@ -15,13 +15,13 @@ func pingHandler(w http.ResponseWriter, r *http.Request) {
 		http.Error(w, "Method not allowed", http.StatusMethodNotAllowed)
 		return
 	}
-	fmt.Fprintf(w, "Service 2 is running")
+	fmt.Fprintf(w, "pong")
 }
 
 func main() {
 	http.HandleFunc("/ping", pingHandler)
 
-	port := "8082"
+	port := "8080"
 	fmt.Printf("Server starting on port %s...\n", port)
 	if err := http.ListenAndServe(":"+port, nil); err != nil {
 		log.Fatalf("Server failed: %v", err)

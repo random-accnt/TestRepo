@@ -10,4 +10,5 @@ run:
 
 clean:
 	docker-compose down --rmi all --remove-orphans
-	rebuild: clean build
+
+rebuild: clean build
